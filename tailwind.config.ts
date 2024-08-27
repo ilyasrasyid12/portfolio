@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import defaultTheme from "tailwindcss/defaultTheme"; // Impor palet warna default
 
 const config: Config = {
   content: [
@@ -13,8 +14,14 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      colors: {
+        ...defaultTheme.colors, // Gunakan semua warna default
+        primary: "#698C71", // Warna kustom Anda
+        secondary: "#F7F7F8", // Warna kustom Anda
+      },
     },
   },
   plugins: [],
 };
+
 export default config;
